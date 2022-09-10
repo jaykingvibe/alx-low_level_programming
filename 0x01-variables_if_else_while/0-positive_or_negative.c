@@ -3,11 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - print if he number is positive, zero, or negative
+ * main - entry point
  *
- * Description: using the main function
- * this program prints "programming is positive, zero, negative
- * return: 0
+ * Return:always return 0
  */
 int main(void)
 {
@@ -15,18 +13,17 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	 /* your code goes there */
 	if (n < 0)
 	{
-		printf("%i is positive\n", n);
+		printf("%d is negative\n", n);
 	} 
 	else if (n == 0)
 		 {
-			 printf("%i is zero\n", n);
+			 printf("%d is zero\n", n);
 		 } 
 	else if (n < 0)
 	{
-		printf("%i is negative\n", n);
+		printf("%d is positive\n", n);
 	}
 	return (0);
 }
