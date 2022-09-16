@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 /**
  *
  * print_alphabet - this program prints alphabet
@@ -15,9 +16,9 @@ void print_alphabet(void)
 
 		while (alfa <= 'z')
 
-		{
-			write(1, &alfa, 1);
-			alfa++;
-		}
+{
+		write(1, &alfa, 1);
+		alfa++;
+}
 		write(1, "\n", 1);
 }
