@@ -1,51 +1,38 @@
 #include "main.h"
+#include "6-abs.c"
+#include <stdio.h>
 
 /**
- * print_times_table - prints times table
- * @n : times table to use
- * Return:void
+ * print_to_98 - prints numbers
+ *
+ * @n: integer to be passed
+ *
  */
 
-void print_times_table(int n)
+void print_to_98(int n)
 {
+	int i;
 
-int a = 0, rep, b;
-
-if (n < 0 || n > 15)
-	return;
-
-while (a <= n)
-{
-	for (b = 0; b <= n; b++)
+	if (n > 98)
 	{
-		rep = a * b;
-		if (b == 0)
-			_putchar('0' + rep);
-		else if (rep < 10)
+		for (i = n; i >= 98; i--)
 		{
-			_putchar(' ');
-			_putchar(' ');
-			_putchar('0' + rep);
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
-		else if (rep < 100)
+	} else
+	{
+		for (i = n; i <= 98; i++)
 		{
-			_putchar(' ');
-			_putchar('0' + rep / 10);
-			_putchar('0' + rep % 10);
-		}
-		else
-		{
-			_putchar('0' + rep / 100);
-			_putchar('0' + (rep - 100) / 10);
-			_putchar('0' + rep % 10);
-		}
-		if (b < n)
-		{
-			_putchar(',');
-			_putchar(' ');
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
-	_putchar('\n');
-	a++;
-}
+	printf("\n");
 }
