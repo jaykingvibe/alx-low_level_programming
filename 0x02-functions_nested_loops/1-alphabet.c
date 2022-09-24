@@ -1,23 +1,17 @@
-#include <unistd.h>                                                                                                             
+#include "main.h"
+
 /**
- *
- * print_alphabet - this program prints alphabet
- *
- *
- *
- * Return: 0
- *
+ * _isdigit - checks whether a  character is a digit or not
+ * @c: tested character
+ * Return: 1 if it is, 0 otherwise
  */
 
-void print_alphabet(void)
+int _isdigit(int c)
 {
-	
-	char alfa = 'a';                                                                                                             
-
-	while (alfa <= 'z')
+	if ((c >= 48) && (c <= 57))
 	{
-		write(1, &alfa, 1);
-		alfa++;
-	}                                                                                              
-		write(1, "\n", 1);
+		return (1);
+	}
+
+	return (0);
 }
